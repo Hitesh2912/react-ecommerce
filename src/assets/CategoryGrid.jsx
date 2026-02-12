@@ -1,18 +1,18 @@
 import React from "react";
 import "./CategoryGrid.css";
-import img1 from "../assets/Category/label1.jpg"
-import img2 from "../assets/Category/label6.webp"
-import img3 from "../assets/Category/label1.webp"
-import img4 from "../assets/Category/label10.jpg"
-import img5 from "../assets/Category/label2.webp"
-import img6 from "../assets/Category/label4.jpg"
-import img7 from "../assets/Category/label3.webp"
-import img8 from "../assets/Category/label5.jpg"
-import img9 from "../assets/Category/label7.jpg"
-import img10 from "../assets/Category/label6.webp"
-import img11 from "../assets/Category/label1.avif"
-import img12 from "../assets/Category/label9.webp"
 
+import img1 from "./Category/label1.jpg";
+import img2 from "./Category/label6.webp";
+import img3 from "./Category/label.webp";
+import img4 from "./Category/label10.jpg";
+import img5 from "./Category/label2.webp";
+import img6 from "./Category/label4.jpg";
+import img7 from "./Category/label3.webp";
+import img8 from "./Category/label5.jpg";
+import img9 from "./Category/label7.jpg";
+import img10 from "./Category/label6.webp";
+import img11 from "./Category/label8.avif";
+import img12 from "./Category/label9.webp";
 
 const categories = [
   { img: img1, label: "Kid's Wear" },
@@ -33,12 +33,13 @@ export default function CategoryGrid() {
   return (
     <div className="category-group">
       <h2 className="category-title">SHOP BY CATEGORY</h2>
+
       <div className="category-grid">
-        {categories.map((cat, i) => (
-          <div className="category-item" key={i}>
+        {categories.map((cat, index) => (
+          <div className="category-item" key={index}>
             <img src={cat.img} alt={cat.label} />
-            <label className="category-label">{cat.label}</label><br />
-            <label className="cta-label">Shop Now</label>
+            <p className="category-label">{cat.label}</p>
+            <span className="cta-label">Shop Now</span>
           </div>
         ))}
       </div>

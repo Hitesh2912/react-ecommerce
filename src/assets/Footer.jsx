@@ -7,11 +7,17 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
+
+        {/* Brand Section */}
         <div className="footer-brand">
-          <img img:logo  alt="Logo" />
-          <p>Your one-stop destination for fashion, beauty & lifestyle products. Quality guaranteed!</p>
+          <img src={logo} alt="Logo" className="footer-logo" />
+          <p>
+            Your one-stop destination for fashion, beauty & lifestyle products.
+            Quality guaranteed!
+          </p>
         </div>
 
+        {/* Shop Links */}
         <div className="footer-links">
           <h4>Shop</h4>
           <ul>
@@ -23,6 +29,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Customer Service */}
         <div className="footer-links">
           <h4>Customer Service</h4>
           <ul>
@@ -34,6 +41,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Social + Newsletter */}
         <div className="footer-social">
           <h4>Follow Us</h4>
           <div className="social-icons">
@@ -42,14 +50,19 @@ const Footer = () => {
             <FaTwitter />
             <FaLinkedinIn />
           </div>
+
           <p>Subscribe to our newsletter for latest offers!</p>
           <input type="email" placeholder="Your email" />
           <button>Subscribe</button>
         </div>
+
       </div>
 
+      {/* Bottom Section */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} YourCompanyName. All Rights Reserved.</p>
+        <p>
+          © {new Date().getFullYear()} YourCompanyName. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

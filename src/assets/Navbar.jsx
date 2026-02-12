@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+import logo from "../assets/icons/Tshirt.png";
+import searchIcon from "../assets/icons/Search.png";
+import profileIcon from "../assets/icons/Account.png";
+import wishlistIcon from "../assets/icons/wishlist.png";
+import cartIcon from "../assets/icons/cart.png";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -9,7 +15,7 @@ const Navbar = () => {
     <nav>
       {/* Logo */}
       <Link to="/">
-        <img className="logo" src="../assets/icons/Tshirt.png" alt="logo" />
+        <img className="logo" src={logo} alt="logo" />
       </Link>
 
       {/* Links */}
@@ -25,30 +31,40 @@ const Navbar = () => {
       {/* Search */}
       <div className="search">
         <input placeholder="Search..." />
-        <img src="../assets/icons/Search.png" alt="search" />
+        <img src={searchIcon} alt="search" />
       </div>
 
       {/* Profile Dropdown */}
       <div className="profile-container">
         <img
-          src="../assets/icons/Account.png"
+          src={profileIcon}
           alt="profile"
           className="profile-icon"
           onClick={() => setOpen(!open)}
         />
+
         {open && (
           <div className="dropdown">
-            <Link to="/signup" onClick={()=>setOpen(false)}>Signup</Link>
-            <Link to="/signin" onClick={()=> setOpen(false)}>Signin</Link>
-            <button onClick={() => {alert("Logged out!");setOpen(false);}}>Logout</button>
-
+            <Link to="/signup" onClick={() => setOpen(false)}>Signup</Link>
+            <Link to="/signin" onClick={() => setOpen(false)}>Signin</Link>
+            <button onClick={() => {
+              alert("Logged out!");
+              setOpen(false);
+            }}>
+              Logout
+            </button>
           </div>
         )}
       </div>
 
       {/* Other icons */}
-      <Link to="/wishlist"><img src="../assets/icons/wishlist.png" alt="wish" /></Link>
-      <Link to="/cart"><img src="../assets/icons/cart.png" alt="cart" /></Link>
+      <Link to="/wishlist">
+        <img src={wishlistIcon} alt="wishlist" />
+      </Link>
+
+      <Link to="/cart">
+        <img src={cartIcon} alt="cart" />
+      </Link>
     </nav>
   );
 };

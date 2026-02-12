@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-// import logo from "../assets/icons/Tshirt.png"; // replace with your logo
+import logo from "../assets/icons/Tshirt.png";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <img src="src/assets/icons/Tshirt.png" alt="Logo" />
+          <img img:logo  alt="Logo" />
           <p>Your one-stop destination for fashion, beauty & lifestyle products. Quality guaranteed!</p>
         </div>
 

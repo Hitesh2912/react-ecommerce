@@ -1,0 +1,98 @@
+.flipers {
+  width: 100%;                  
+  padding: 16px 0;               /* vertical padding */
+  background: linear-gradient(90deg, #820c0e, #bebbbc); /* green to teal gradient */
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.flipers h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.flipers p {
+  font-size: 1rem;
+  margin: 4px 0 0 0;
+  font-weight: 500;
+}
+
+/* Fade animations */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* Responsive adjustments */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .flipers {
+    padding: 14px 0;
+  }
+
+  .flipers h2 {
+    font-size: 1.4rem;
+  }
+
+  .flipers p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .flipers {
+    padding: 12px 0;
+  }
+
+  .flipers h2 {
+    font-size: 1.25rem;
+  }
+
+  .flipers p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .flipers {
+    padding: 10px 0;
+  }
+
+  .flipers h2 {
+    font-size: 1.1rem;
+  }
+
+  .flipers p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .flipers {
+    padding: 8px 0;
+  }
+
+  .flipers h2 {
+    font-size: 1rem;
+  }
+
+  .flipers p {
+    font-size: 0.8rem;
+  }
+}
+
+/*  #2b0413, #decf76); */

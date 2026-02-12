@@ -1,8 +1,9 @@
 import React from "react";
 import "./CategoryGrid.css";
+import img1 from "../assets/Category/label1.jpg"
 
 const categories = [
-  { img: "../assets/Category/label1.jpg", label: "Kid's Wear" },
+  { img: img1, label: "Kid's Wear" },
   { img: "../assets/Category/label6.webp", label: "Foot Wear" },
   { img: "../assets/Category/label.webp", label: "Women's Wear" },
   { img: "../assets/Category/label10.jpg", label: "Men's Wear" },
